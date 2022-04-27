@@ -1,6 +1,6 @@
 name: 'Choreo Workflow Logger'
 description: 'Send Github Action Workflow logs to Azure Logs Analytics'
-author: 'hoisjp'
+author: 'WSO2'
 inputs:
   domain:
     required: true
