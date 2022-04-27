@@ -22,7 +22,7 @@ try {
 
     axios.post(WebhhookURL, body).then(function (response) {
         core.setOutput("azure-webhook-status", "success");
-        // console.log("choreo-status", "deployed");
+        console.log("azure-webhook-status", "success");
     }).catch(function (error) {
         core.setOutput("azure-webhook-status", "failed");
         if (error.response) {
