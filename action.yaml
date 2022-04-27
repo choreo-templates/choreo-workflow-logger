@@ -15,5 +15,5 @@ inputs:
     required: true
     description: "Commit sha"
 runs:
-  using: 'node12'
-  main: 'dist/index.js'
+  using: 'node16'
+  main: 'index.js'
