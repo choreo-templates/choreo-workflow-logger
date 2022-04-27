@@ -1,0 +1,19 @@
+name: 'Choreo Workflow Logger'
+description: 'Send Github Action Workflow logs to Azure Logs Analytics'
+author: 'hoisjp'
+inputs:
+  component-id:
+    required: true
+    description: "Choreo component Id"
+  run-id:
+    required: true
+    description: "Run ID of the workflow"
+  secret:
+    required: true
+    description: "Secret code for the webhook"
+  sha:
+    required: true
+    description: "Commit sha"
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
