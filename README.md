@@ -31,15 +31,11 @@ Send Github Action Workflow logs to Azure Logs Analytics
   build:
     steps:
     - name: choreo Deploy
-      uses: choreo-templates/build-deploy-action@v1
+      uses: choreo-templates/choreo-workflow-logger@v1
       with:
        domain: ${{secrets.DOMAIN}}
-       org-id: ${{secrets.ORG_ID}}
-       project-id: ${{secrets.PROJECT_ID}}
-       token: ${{secrets.TOKEN}}
-       image-name: ${{secrets.DOCKER_USER}}/${{ github.event.repository.name }} 
-       git-hash: ${{github.sha}}
-       env-id: ${{secrets.ENV_ID}}
-       app-id: ${{secrets.APP_ID}}
-       port-extract-file-path: 'path to file'
+       component-id: ${{secrets.APP_ID}}
+       run-id: ${{env.RUN_ID}}
+       secreet: ${{secrets.TOKEN}}
+       sha: ${{github.sha}}
 ```
