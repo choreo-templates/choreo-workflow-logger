@@ -2,6 +2,9 @@ name: 'Choreo Workflow Logger'
 description: 'Send Github Action Workflow logs to Azure Logs Analytics'
 author: 'hoisjp'
 inputs:
+  domain:
+    required: true
+    description: "Choreo Domain"
   component-id:
     required: true
     description: "Choreo component Id"
